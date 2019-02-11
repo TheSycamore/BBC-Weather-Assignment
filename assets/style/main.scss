@@ -4,3 +4,19 @@
  */
  
  @import './sass/vendor/normalize.scss';
+
+ @import "./sass/base/_colours.scss";
+
+ /**
+ * Over-ride vendor css rules
+ */
+@import "./sass/vendor/_vendor-extensions.scss";
+
+@import "./sass/base/_variables.scss";
+@import "./sass/helpers/_utility.scss";
+
+@import "./sass/base/_base.scss";
+
+@import "./sass/components/_siteHeader.scss";
+@import "./sass/components/_errors.scss";
+@import "./sass/components/_results.scss";
