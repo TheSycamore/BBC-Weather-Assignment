@@ -21,7 +21,23 @@ export default {
     Results
   },
   data: () => {
-    return {}
+    return {
+      apis: {
+        fetchCities: '/api/v1/availableCities',
+        fetchWeather: '/api/v1/city?city='
+      },
+      cities: [],
+      selectedCity: '',
+      response: {
+        data: {},
+        error: {
+          code: '',
+          message: '',
+          moreInfo: '',
+          status: ''
+        }
+      }
+    }
   },
   mounted: function() {
     this.fetchCities()
