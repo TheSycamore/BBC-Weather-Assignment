@@ -19,6 +19,18 @@ export default {
     SiteHeader,
     Errors,
     Results
+  },
+  data: () => {
+    return {}
+  },
+  mounted: function() {
+    this.fetchCities()
+  },
+  methods: {
+    async fetchCities() {},
+    async cityClicked(city) {},
+    setSelected(city) {},
+    clearResults() {}
   }
 }
 </script>
