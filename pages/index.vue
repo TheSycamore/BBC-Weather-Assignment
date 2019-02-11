@@ -57,10 +57,25 @@ export default {
           this.response.error.status = 500
         })
     },
-    cityClicked(city) {
-      console.log(city)
+    async cityClicked(city) {
+      this.clearResults()
+      this.setSelected(city)
+      await this.$axios
+        .$get(this.apis.fetchWeather + city.slug)
+        .then(res => {
+          // console.log(res)
+          this.response.data = res
+        })
+        .catch(e => {
+          // console.log(e.response.data)
+          this.response.error.status = e.response.data.status
+          this.response.error.message = e.response.data.message
+          this.response.error.moreInfo = e.response.data.moreInfo
+        })
     },
-    setSelected(city) {},
+    setSelected(city) {
+      this.selectedCity = city.name
+    },
     clearResults() {
       this.selectedCity = ''
       this.response = this.initialResponse()
