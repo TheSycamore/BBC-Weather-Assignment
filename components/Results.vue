@@ -2,7 +2,10 @@
   <div v-if=" selectedCity ">
     <h2>{{ selectedCity }}</h2>
     <div v-if=" hasResult ">
-      RESPONSE: {{ response }}
+      <span>summary: {{ response.summary }}</span>
+      <span>temperature: {{ response.temperature }}</span>
+      <span>icon: {{ response.icon }}</span>
+      <span>iconPath: {{ iconPath }}</span>
     </div>
   </div>
 </template>
@@ -24,6 +27,9 @@ export default {
   computed: {
     hasResult: function() {
       return Object.keys(this.response).length
+    },
+    iconPath: function() {
+      return '/images/' + this.response.icon + '.svg'
     }
   }
 }
