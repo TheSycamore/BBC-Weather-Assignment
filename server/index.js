@@ -55,6 +55,15 @@ app.get('/api/v1/city', (req, res) => {
   }
 })
 
+app.get('/api/v1/test', (req, res) => {
+  return res.status(400).json({
+    status: 400,
+    message: 'Sorry the city you requested is not available.',
+    moreInfo:
+      'The request does not contain a valid API query parameter. Error location: app.get(/api/v1/test'
+  })
+})
+
 /* ==================Functions================== */
 
 function validateRequest(req, res) {

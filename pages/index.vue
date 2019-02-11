@@ -24,7 +24,8 @@ export default {
     return {
       apis: {
         fetchCities: '/api/v1/availableCities',
-        fetchWeather: '/api/v1/city?city='
+        fetchWeather: '/api/v1/city?city=',
+        errorTest: '/api/v1/test'
       },
       cities: [],
       selectedCity: '',
@@ -47,6 +48,7 @@ export default {
       this.clearResults()
       await this.$axios
         .$get(this.apis.fetchCities)
+        // .$get(this.apis.errorTest)
         .then(res => {
           // console.log(res)
           this.cities = res
@@ -62,12 +64,13 @@ export default {
       this.setSelected(city)
       await this.$axios
         .$get(this.apis.fetchWeather + city.slug)
+        // .$get(this.apis.errorTest)
         .then(res => {
           // console.log(res)
           this.response.data = res
         })
         .catch(e => {
-          // console.log(e.response.data)
+          console.log(e.response.data)
           this.response.error.status = e.response.data.status
           this.response.error.message = e.response.data.message
           this.response.error.moreInfo = e.response.data.moreInfo
