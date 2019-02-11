@@ -1,0 +1,27 @@
+$globalPaddingSides: 15px;
+$globalPadding: 0 $globalPaddingSides;
+$maxPageWidth: 1000px;
+
+/********************* BREAKPOINTS***********************/
+// https://bootstrapcreative.com/bootstrap-4-media-queries/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+// xs = Extra small <576px
+$breakXS: 575px;
+
+/* Small devices (landscape phones, 576px and up) */
+// sm = Small ≥576px
+$breakSM: 576px;
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+// md = Large ≥768px
+$breakMD: 768px;
+
+/* Large devices (desktops, 1000px and up) */
+// lg = Large ≥1000px
+$breakLG: $maxPageWidth;
+
+// xl = Extra large ≥1200px
+$breakXL: 1200px;

@@ -1,0 +1,41 @@
+.Util-bold {
+    font-weight: bold;
+}
+.Util-italic {
+    font-style: italic;
+}
+.Util-left {
+    text-align: left;
+}
+.Util-right {
+    text-align: right;
+}
+.Util-center {
+    text-align: center;
+}
+.Util-underline {
+    text-decoration: underline;
+}
+.Util-point {
+    cursor: pointer;
+}
+.Util-center-xs {
+    @media (max-width: $breakXS) {
+        text-align: center;
+    }
+}
+.Util-hidden-xs {
+    @media (max-width: $breakXS) {
+        display: none !important;
+    }
+}
+.Util-hidden-sm {
+    @media (min-width: $breakSM) {
+        display: none !important;
+    }
+}
+.Util-visible-xs {
+    @media (min-width: $breakXS) {
+        display: none !important;
+    }
+}
