@@ -9,7 +9,7 @@
           v-for=" city in cities "
           :key=" city.index "
         >
-          <a>
+          <a @click.prevent=" emitCityClicked(city) ">
             {{ city.name }}
           </a>
         </li>
@@ -26,6 +26,11 @@ export default {
       default: () => {
         return {}
       }
+    }
+  },
+  methods: {
+    emitCityClicked(city) {
+      this.$emit('cityClicked', city)
     }
   }
 }

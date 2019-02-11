@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <site-header :cities="cities" />
+    <site-header :cities="cities" @cityClicked="cityClicked" />
 
     <main>
       <errors />
@@ -57,7 +57,9 @@ export default {
           this.response.error.status = 500
         })
     },
-    async cityClicked(city) {},
+    cityClicked(city) {
+      console.log(city)
+    },
     setSelected(city) {},
     clearResults() {
       this.selectedCity = ''
