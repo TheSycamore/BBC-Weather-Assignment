@@ -4,6 +4,7 @@ const { Nuxt, Builder } = require('nuxt')
 const app = express()
 
 const request = require('request')
+const availableCities = require('./citiesAvailable.js')
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
@@ -34,3 +35,8 @@ async function start() {
   })
 }
 start()
+
+app.get('/api/v1/availableCities', (req, res) => {
+  // console.log('Request made for available cities')
+  res.send(availableCities)
+})
