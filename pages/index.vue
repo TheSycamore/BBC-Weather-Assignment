@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <site-header />
+    <site-header :cities="cities" />
 
     <main>
       <errors />
@@ -43,10 +43,37 @@ export default {
     this.fetchCities()
   },
   methods: {
-    async fetchCities() {},
+    async fetchCities() {
+      this.clearResults()
+      await this.$axios
+        .$get(this.apis.fetchCities)
+        .then(res => {
+          // console.log(res)
+          this.cities = res
+        })
+        .catch(e => {
+          this.response.error.message =
+            'Sorry! Could not retrieve the list of cities.'
+          this.response.error.status = 500
+        })
+    },
     async cityClicked(city) {},
     setSelected(city) {},
-    clearResults() {}
+    clearResults() {
+      this.selectedCity = ''
+      this.response = this.initialResponse()
+    },
+    initialResponse() {
+      return {
+        data: {},
+        error: {
+          code: '',
+          message: '',
+          moreInfo: '',
+          status: ''
+        }
+      }
+    }
   }
 }
 </script>
