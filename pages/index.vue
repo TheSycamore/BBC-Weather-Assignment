@@ -3,7 +3,7 @@
     <site-header :cities="cities" :selected-city="selectedCity" @cityClicked="cityClicked" />
 
     <main>
-      <errors />
+      <errors :error="response.error" />
       <results />
     </main>
   </div>

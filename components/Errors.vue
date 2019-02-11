@@ -1,11 +1,20 @@
 <template>
-  <div>
-    errors
-  </div>
+  <p v-if=" error.message ">
+    Error: {{ error.message }}
+  </p>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    error: {
+      type: Object,
+      default: () => {
+        return {}
+      }
+    }
+  }
+}
 </script>
 
 <style>
