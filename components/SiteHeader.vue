@@ -9,6 +9,7 @@
           v-for=" city in cities "
           :key=" city.index "
           class="SiteHeaderNav__item"
+          :class="{ 'SiteHeaderNav__item--active': selectedCity === city.name }"
         >
           <a @click.prevent=" emitCityClicked(city) ">
             {{ city.name }}
@@ -27,6 +28,11 @@ export default {
       default: () => {
         return {}
       }
+    },
+    selectedCity: {
+      type: String,
+      default: '',
+      required: false
     }
   },
   methods: {

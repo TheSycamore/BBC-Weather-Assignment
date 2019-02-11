@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <site-header :cities="cities" @cityClicked="cityClicked" />
+    <site-header :cities="cities" :selected-city="selectedCity" @cityClicked="cityClicked" />
 
     <main>
       <errors />
