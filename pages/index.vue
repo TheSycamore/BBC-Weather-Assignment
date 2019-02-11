@@ -4,7 +4,7 @@
 
     <main>
       <errors :error="response.error" />
-      <results />
+      <results :selected-city="selectedCity" :response="response.data" />
     </main>
   </div>
 </template>
