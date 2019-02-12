@@ -30,7 +30,7 @@
     }
 }
 .Util-hidden-sm {
-    @media (min-width: $breakSM) {
+    @media (max-width: $breakSM) {
         display: none !important;
     }
 }
