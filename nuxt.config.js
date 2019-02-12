@@ -13,7 +13,10 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' }
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700' }
+    ]
   },
 
   /*
