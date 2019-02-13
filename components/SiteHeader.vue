@@ -1,8 +1,6 @@
 <template>
   <header class="SiteHeader">
-    <h1 class="SiteHeader__title">
-      BBC Weather
-    </h1>
+    <h1 class="SiteHeader__title">BBC Weather</h1>
     <nav class="SiteHeaderNav">
       <ul>
         <li
