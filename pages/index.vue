@@ -1,5 +1,8 @@
 <template>
   <div id="container">
+    <div id="Cloud1" class="Cloud" />
+    <div id="Cloud2" class="Cloud Util-hidden-sm" />
+    <div id="Cloud3" class="Cloud Util-hidden-sm" />
     <site-header :cities="cities" :selected-city="selectedCity" @cityClicked="cityClicked" />
 
     <main>

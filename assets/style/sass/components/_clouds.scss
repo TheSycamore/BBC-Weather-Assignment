@@ -1,0 +1,45 @@
+@media (min-height: $breakheightXS) {
+    .Cloud {
+        position: absolute;
+        left: 50%;
+        bottom: 3%;
+    
+        z-index: -1000;
+        overflow: hidden;
+    
+        max-width: 300px;
+        min-height: 245px;
+        min-width: 245px;
+    
+        background-position: bottom;
+        background-image: url(/images/cloud.png);
+        background-repeat: no-repeat;
+        background-size: 245px 245px;
+    
+        animation: rotating-function 20s linear infinite;
+    }
+    #Cloud1 {
+        margin-left: -128px; // half of width
+        
+        @media (min-width: $breakSM) {
+            animation: none;
+            bottom: 4.5%;
+        }
+    }
+    #Cloud2 {
+        margin-left: -20px;
+        opacity: .8;
+    }
+    #Cloud3 {
+        margin-left: -200px;
+        opacity: .75;
+    }
+}
+
+@keyframes rotating-function {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(8deg); }
+    35% { transform: rotate(8deg); }
+    85% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
