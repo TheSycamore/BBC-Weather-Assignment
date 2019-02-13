@@ -6,6 +6,7 @@ const app = express()
 const request = require('request')
 const availableCities = require('./citiesAvailable.js')
 const locations = require('./cityLocations.js')
+// TODO: move key to config
 const darkskyAPIKey = '41088133806b2bf97bed664093f318c1'
 
 // Import and Set Nuxt.js options
