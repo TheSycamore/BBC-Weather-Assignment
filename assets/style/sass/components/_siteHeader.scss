@@ -1,0 +1,67 @@
+.SiteHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.SiteHeader__title {
+    padding: 30px 0 20px;
+
+    @media (min-width: $breakSM) {
+        padding: 30px 0 30px;
+    }
+}
+.SiteHeaderNav ul {
+    padding: 0;
+    
+    @media (min-width: $breakSM) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+.SiteHeaderNav__item {
+    padding-top: 1px;
+    text-align: center;
+    list-style: none;
+    font-weight: bold;
+    text-decoration: underline;
+
+    @media (min-width: $breakSM) {
+        color: lighten($smNavTextColour, 25);
+        margin: 0 12px;
+        padding: 6px 10px 2px;
+        border-bottom: 4px solid $smNavBgColour;
+        border-radius: 3px;
+ 
+        background-color: $smNavBgColour;
+
+        font-size: 1.2em;
+        text-decoration: none;
+
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: darken($primaryTextColour, 7);
+
+        @media (min-width: $breakSM) {
+            color: $smNavTextColour;
+        }
+    }
+}
+.SiteHeaderNav__item--active {
+    color: $activeLink;
+    text-decoration: none;
+
+    @media (min-width: $breakSM) {
+        color: $smNavTextColour;
+        border-bottom: 4px solid $smNavTextColour;
+    }
+
+    &:hover {
+        color: $activeLink;
+
+        @media (min-width: $breakSM) {
+            color: $smNavTextColour;
+        }
+    }
+}
