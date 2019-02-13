@@ -29,7 +29,7 @@ export default {
       return Object.keys(this.response).length
     },
     iconPath: function() {
-      return '/images/' + this.response.icon + '.svg'
+      return '/images/weather-icons/' + this.response.icon + '.svg'
     }
   }
 }
