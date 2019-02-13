@@ -2,7 +2,7 @@ $globalPaddingSides: 15px;
 $globalPadding: 0 $globalPaddingSides;
 $maxPageWidth: 1000px;
 
-/********************* BREAKPOINTS***********************/
+/********************* BREAKPOINTS **********************/
 // https://bootstrapcreative.com/bootstrap-4-media-queries/
 /* 
 Extra small devices (portrait phones, less than 576px) 
@@ -25,3 +25,6 @@ $breakLG: $maxPageWidth;
 
 // xl = Extra large ≥1200px
 $breakXL: 1200px;
+
+/****************** BREAKPOINTS HEIGHT ******************/
+$breakheightXS: 560px;
