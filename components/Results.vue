@@ -41,7 +41,11 @@ export default {
       return Object.keys(this.response).length
     },
     iconPath: function() {
-      return '/images/weather-icons/' + this.response.icon + '.svg'
+      if (this.response.icon === '') {
+        // TODO: handle non-whitelisted weather icons (EG very-very-stormy)
+        return '/images/weather-icons/default.svg'
+      }
+      return `/images/weather-icons/${this.response.icon}.svg`
     }
   }
 }
