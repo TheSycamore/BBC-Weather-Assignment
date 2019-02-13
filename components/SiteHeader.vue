@@ -10,8 +10,9 @@
           :key=" city.index "
           class="SiteHeaderNav__item"
           :class="{ 'SiteHeaderNav__item--active': selectedCity === city.name }"
+          @click.prevent=" emitCityClicked(city) "
         >
-          <a @click.prevent=" emitCityClicked(city) ">
+          <a>
             {{ city.name }}
           </a>
         </li>
