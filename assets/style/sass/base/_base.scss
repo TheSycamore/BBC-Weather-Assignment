@@ -1,3 +1,12 @@
 body {
+    height: 100vh;
+    background-color: $sky2; /* For browsers that do not support linear-gradient */
+    background-image: linear-gradient($sky1, $sky3); /* Standard syntax (must be last) */
+    
+    color: $primaryTextColour;
     font-family: $primaryFont;
+}
+h1 {
+    margin: 0;
+    padding: 0;
 }
