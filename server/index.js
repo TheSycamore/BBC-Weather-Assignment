@@ -69,7 +69,7 @@ app.get('/api/v1/test', (req, res) => {
 
 function validateRequest(req, res) {
   // console.log(req.query.city) // = new-york
-  
+
   // Check req.query exists in locations.city
   const found = locations.some(function(el) {
     return el.city === req.query.city
